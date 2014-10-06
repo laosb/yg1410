@@ -1,0 +1,22 @@
+/* CSS declarations go here */
+
+.index-block {
+    margin-top: 60px;
+    margin-bottom: 60px;
+    color: rgba(255, 255, 255, 0.87);
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.53);
+    letter-spacing: 0;
+}
+.index-title {
+    font-size: 24px;
+    font-weight: 200;
+}
+.global-title {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 3.2em;
+    text-align: center;
+}
+body {
+    font-family: "Myriad Set Pro", "Lucida Grande", "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "Microsoft YaHei", Arial, sans-serif;
+}

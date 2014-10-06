@@ -1,0 +1,58 @@
+<head>
+    <title>鄞州高级中学14级10班</title>
+</head>
+<template name="layout">
+    <a href="{{pathFor 'home'}}"><h1 class='global-title'>鄞州高级中学14级10班</h1></a>
+    {{> yield}}
+    <p class="text-center" style="margin-top:20px">版权所有 2014 鄞州高级中学14级10班。由吕世博开发。v1.0.0<a href="/user">{{#if currentUser}}用户管理{{else}}登陆&amp;注册{{/if}}</a>{{#if currentUser}}|<a href="/admin/blog">博客管理</a>|<a class='btn btn-warning btn-xs' onclick="Meteor.logout();">登出</a>{{/if}}
+    </p>
+</template>
+<template name="home">
+    <div class="container">
+        <div class="row">
+            <a href="/blog">
+                <div class="col-xs-12 col-md-6" style="background-color:{{randomColor}}">
+                    <div class="text-center index-block">
+                        <h2 class="index-title">博客</h2>
+                        <br>
+                        <i class="index-intro">我们的青春纪念册</i>
+                    </div>
+                </div>
+            </a>
+            <div class="col-xs-12 col-md-6" style="background-color:{{randomColor}}">
+                <div class="text-center index-block">
+                    <h2 class="index-title">即将到来</h2>
+                    <br>
+                    <i class="index-intro">让我们期待10班的无限创想</i>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</template>
+<template name="user">
+    <div class="container">
+        {{> atForm}} {{#if isAdminUser}} {{> accountsAdmin}} {{/if}}
+    </div>
+    <a href="/admin/blog">管理博客</a>
+</template>
+<template name="10BlogIndex">
+    <div class="container">
+        <div class="row">
+            {{#each posts}}
+            <a href="/blog/{{slug}}">
+                <div class="col-xs-12 col-md-{{randomSize}}" style="background-color:{{randomColor}}">
+                    <div class="text-center index-block">
+                        <h2 class="index-title">{{title}}</h2>
+                        <i class="index-date">{{time publishedAt}} by {{author.profile.name}}</i>
+                        <br>
+                        <i class="index-intro">{{excerpt}}</i>
+                    </div>
+                </div>
+            </a>
+            {{/each}}
+
+        </div>
+    </div>
+</template>
