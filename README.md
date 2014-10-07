@@ -22,5 +22,10 @@
 
 -卒-
 
-此处做一下广告：赶脚Meteor的accounts-ui没中文不爽？快来用accounts-t9n和accounts-template的组合拳！由laosb创建的简中翻译！Piet御用package！
+此处做一下广告：赶脚Meteor的accounts-ui没中文不爽？快来用accounts-t9n和accounts-template的组合拳！由laosb创建的简中翻译！Piet&宁波鄞州高级中学14级10班班级系统御用package！
 ------------
+
+License
+-------
+
+**GPL**
